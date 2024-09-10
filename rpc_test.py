@@ -7,7 +7,7 @@ from rpc_server import fibonacci
 from multiprocessing import Process
 
 @pytest.fixture
-def setup_server(xprocess):
+def setup_server():
     server = RPCServer()
     server.registerMethod(fibonacci)
 
