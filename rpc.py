@@ -77,10 +77,11 @@ class RPCServer:
         Runs the server.
         """
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            self.socket = sock
             sock.bind(self.address)
             sock.listen()
 
-            print(f'Server {self.address} running')
+            print('Server running')
             while True:
                 try:
                     client, address = sock.accept()
@@ -90,6 +91,12 @@ class RPCServer:
                 except KeyboardInterrupt:
                     print(f'Server {self.address} interrupted')
                     break
+
+    def shutdown(self):
+        """
+        Stops the server
+        """
+        self.socket.close()
 
 
 

@@ -11,14 +11,15 @@ def sub(a, b):
 ##########################################################
 
 
-server = RPCServer()
+if __name__ == "__main__":
+    server = RPCServer()
 
-server.registerMethod(add)
-server.registerMethod(sub)
+    server.registerMethod(add)
+    server.registerMethod(sub)
 
-##########################################################
-# Register other methods
-##########################################################
+    ##########################################################
+    # Register other methods
+    ##########################################################
 
-server.run()
+    server.run()
 

@@ -19,6 +19,6 @@ Now that you understand how the code works, you have the following tasks:
 1. Implement on the server side a function `fibonacci` that takes a positive integer `n` as a parameter. This function will calculate the n-th Fibonacci number: a_n = a_{n-1} + a_{n_2}.
    - Don't forget to add error handling for those cases where the input is not valid!
 
-2. Modify the client to call that function with several values of `n` (both valid and invalid).
+2. Modify the client to call that function with several values of `n` (both valid and invalid). If a value is invalid, the client will return the string `invalid input`.
 3. Create a new function on the server side that calculates and returns the **checksum** of the byte array provided as parameter (see Assignment 1). Modify the client to call the function using several example calls.
 
